@@ -29,4 +29,4 @@ client.on('messageCreate', message => {
 
   }
 });
-cliemt.login(token)
+client.login(token)
