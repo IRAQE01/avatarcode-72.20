@@ -1,4 +1,8 @@
-const {prefix , token} = require ('./config.json');
+const {prefix , token , GatewayIntentBits , Partials} = require ('./config.json');
+const client = new Client({
+  intents: ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent', GatewayIntentBits.Guilds],
+  partials: [Partials.Channel],
+});
 client.on('messageCreate', message => {
     
   if (message.author.bot) return;
